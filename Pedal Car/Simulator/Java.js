@@ -1,10 +1,12 @@
 var timerElement = document.getElementById('timer');
+document.getElementById("btnmenu1").disabled = false;
 var bodyElement = document.body;
 var intervalId;
-var totalSeconds = 2; // 7 minutos em segundos
+var totalSeconds = 5; // 7 minutos em segundos
 
 function startCountdown() {
     intervalId = setInterval(updateCountdown, 1000);
+    document.getElementById("btnmenu1").disabled = true;
 }
 
 function updateCountdown() {
@@ -28,6 +30,7 @@ function pad(value) {
 function stopCountdown() {
     clearInterval(intervalId);
     clearInterval(intervalId_stoptime);
+    document.getElementById("btnmenu1").disabled = false;
 }
 
 
@@ -57,6 +60,7 @@ function pad(value) {
 function stopCountdown() {
     clearInterval(intervalId_stoptime);
     clearInterval(intervalId);
+    document.getElementById("btnmenu1").disabled = false;
 }
 
 
