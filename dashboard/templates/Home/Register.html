@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dashboard/templates/CSS/Register.css">
+    <title>Document</title>
+</head>
+<body>
+
+  <div id="preloader" style="display: block">
+    <div class="loading" style="opacity: 0;">
+      <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+      <circle class="loading__center" cx="100" cy="100" r="7" />
+      <rect class="loading__rect" x="65" y="65" width="70" height="70" rx="20" />
+      <path class="loading__line loading__line--1" d="M100 100c49-26.7 76.7-26.7 860 100 7.6 40-50 75-86 90s-85 16-84-90c.7-70.7 23.3-82.3 68-35l35" />
+      <path class="loading__line loading__line--2" d="M100 100C88 20.7 73-.1 55 25c-27 44-18 178 45 143s83-134 41-148c-28-9.3-41.7 7-41 49.2V119" />
+      <!-- <circle class="loading__dot loading__dot--1" cx="100" cy="104" r="7" /> -->
+      <circle class="loading__dot loading__dot--2" cx="100" cy="82" r="10" />
+      <circle class="loading__dot loading__dot--3" cx="100" cy="122" r="5" />
+      <mask id="loading__mask">
+        <rect class="loading__rect loading__rect--masked" transform="rotate(45 100 100)" x="65" y="65" width="70" height="70" rx="6" />
+      </mask>
+      <path class="loading__line loading__line--masked loading__line--1" mask="url(#loading__mask)" d="M100 100c49-26.7 76.7-26.7 86 0 7.6 40-50 75-86 90s-85 16-84-90c.7-70.7 23.3-82.3 49.2V119" />
+      <path class="loading__line loading__line--masked loading__line--2" mask="url(#loading__mask)" d="M100 100C88 20.7 73-.1 55 25c-27 44-18 178 45 143s83-134 41-148c-28-9.3-41.7 7-41 49.2V119" />
+      </svg>
+      <div class="loading__title">
+      Dashboard Scania Latin America
+      </div>
+    </div>
+</div>
+
+<input class="c-checkbox" type="checkbox" id="start">
+<input class="c-checkbox" type="checkbox" id="progress2">
+<input class="c-checkbox" type="checkbox" id="progress3">
+<input class="c-checkbox" type="checkbox" id="finish">
+<div class="c-form__progress"></div>
+
+<div class="c-formContainer">
+  <div class="c-welcome">
+    <div class="escrita">
+      Bem Vindo a Bordo!
+        <h6>Clique na imagem para retornar na tela de login e efetuar seu acesso.</h6>
+    </div>
+    <div onclick="welcome()" class="Project">
+      <img src="/dashboard/templates/Images/SCANIA_ADESIVO_02.png" alt="" class="imgMasked" />
+      <div class="Project-hail"></div>
+      <div class="Project-hail2"></div>
+      <p class="Project-name">Dashboard Scania</p>
+    </div>
+    <!-- <div class="img"> -->
+      <!-- <img src="/templates/Imagens/SCANIA_ADESIVO_02.png" onclick="welcome()"> -->
+    <!-- </div> -->
+  </div>
+
+  <form class="c-form" action="">
+    <div class="c-form__group">
+      <label class="c-form__label" for="username">
+                    <input
+                        type="text"
+                        id="username"
+                        class="c-form__input"
+                        placeholder=" "
+                        pattern="[^\s]+"
+                        required>
+
+                    <label class="c-form__next" for="progress2" role="button">
+                        <span class="c-form__nextIcon"></span>
+                    </label>
+
+      <span class="c-form__groupLabel">Insira seu SSB.</span>
+      <b class="c-form__border"></b>
+      </label>
+    </div>
+
+    <div class="c-form__group">
+      <label class="c-form__label" for="femail">
+                    <input
+                        type="email"
+                        id="femail"
+                        class="c-form__input"
+                        placeholder=" "
+                        pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
+                        required>
+
+                    <label class="c-form__next" for="progress3" role="button">
+                        <span class="c-form__nextIcon"></span>
+                    </label>
+
+      <span class="c-form__groupLabel">Qual seu E-mail comercial ?</span>
+      <b class="c-form__border"></b>
+      </label>
+    </div>
+
+    <div class="c-form__group">
+      <label class="c-form__label" for="fpass">
+                    <input
+                        type="password"
+                        id="fpass"
+                        class="c-form__input"
+                        placeholder=" "
+                        required>
+
+                    <label class="c-form__next" for="finish" role="button">
+                        <span class="c-form__nextIcon"></span>
+                    </label>
+
+      <span class="c-form__groupLabel">Crie uma senha de acesso.</span>
+      <b class="c-form__border"></b>
+      </label>
+    </div>
+
+    <label class="c-form__toggle" for="start">Registrar<span class="c-form__toggleIcon"></span></label>
+  </form>
+</div>
+<footer id="footer">
+  <p>
+    Criado <i class="fa fa-heart"></i> por
+    <a target="_blank" href="https://scaniaazureservices.sharepoint.com/teams/MeuChassis/SitePages/HOME_MANAGEMENT_STRATEGIC_ED1.aspx">SPS Chassis</a>
+    - Para saber mais sobre nosso trabalho e nossas informações de contato
+    <a target="_blank" href="https://outlook.office365.com/mail/group/scaniaazureservices.onmicrosoft.com/meuchassis/email">Aqui.</a>.
+  </p>
+</footer>
+
+
+<script src="/dashboard/templates/JS/login.js"></script>
+<script>
+	document.getElementById("footer").style.display = "none";
+	var i = setInterval(function () {
+    
+    	clearInterval(i);
+
+    	
+    	document.getElementById("preloader").style.display = "none";
+		document.getElementById("footer").style.display = "inline";
+    	document.getElementById(".container").style.display = "inline";
+
+	}, 5000);
+
+
+	"use strict";
+	const loadingElement = document.getElementsByClassName("loading")[0];
+	setTimeout(() => {
+    	loadingElement.classList.add("active");
+	}, 10);
+	window.addEventListener("click", () => {
+    	loadingElement.classList.remove("loading");
+    	setTimeout(() => {
+        	loadingElement.classList.add("loading");
+    	}, 10);
+	});
+</script>
+<script>
+function welcome(){
+  var i = setInterval(function () {
+    
+  clearInterval(i);
+
+  window.location.href = "/dashboard/templates/Home/index.html";
+  }, 1000);
+}
+</script>
+
+
+</body>
+</html>

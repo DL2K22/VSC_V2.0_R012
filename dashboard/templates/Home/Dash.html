@@ -1,0 +1,323 @@
+<!-- PADRAO DO HTML -->
+<!DOCTYPE html>
+<!-- LINGUAGEM USADO -->
+<html lang="PT-BR">
+<!-- CABEÇALHO DA PAGINA -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TITULO DA PAGINA -->
+    <title>Dashboard Scania</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <!-- LINK PARA O HTML CONECTAR COM O CSS -->
+    <link rel="stylesheet" href="/dashboard/templates/CSS/Style.css">
+</head>
+<!-- CORPO DA PAGINA -->
+<body>
+
+    <div id="preloader" style="display: block">
+        <div class="loading" style="opacity: 0;">
+            <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+            <circle class="loading__center" cx="100" cy="100" r="7" />
+            <rect class="loading__rect" x="65" y="65" width="70" height="70" rx="20" />
+            <path class="loading__line loading__line--1" d="M100 100c49-26.7 76.7-26.7 860 100 7.6 40-50 75-86 90s-85 16-84-90c.7-70.7 23.3-82.3 68-35l35" />
+            <path class="loading__line loading__line--2" d="M100 100C88 20.7 73-.1 55 25c-27 44-18 178 45 143s83-134 41-148c-28-9.3-41.7 7-41 49.2V119" />
+            <!-- <circle class="loading__dot loading__dot--1" cx="100" cy="104" r="7" /> -->
+            <circle class="loading__dot loading__dot--2" cx="100" cy="82" r="10" />
+            <circle class="loading__dot loading__dot--3" cx="100" cy="122" r="5" />
+            <mask id="loading__mask">
+                <rect class="loading__rect loading__rect--masked" transform="rotate(45 100 100)" x="65" y="65" width="70" height="70" rx="6" />
+            </mask>
+            <path class="loading__line loading__line--masked loading__line--1" mask="url(#loading__mask)" d="M100 100c49-26.7 76.7-26.7 86 0 7.6 40-50 75-86 90s-85 16-84-90c.7-70.7 23.3-82.3 49.2V119" />
+            <path class="loading__line loading__line--masked loading__line--2" mask="url(#loading__mask)" d="M100 100C88 20.7 73-.1 55 25c-27 44-18 178 45 143s83-134 41-148c-28-9.3-41.7 7-41 49.2V119" />
+            </svg>
+            <div class="loading__title">
+            Dashboard Scania Latin America
+            </div>
+        </div>
+</div>
+
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="/dashboard/templates/Images/SCANIA_ADESIVO_02.png">
+                    <h2>DASH<span class="secundario"> SCANIA</span></h2>
+                </div>
+                <div class="fechar" id="fechar_btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="#" class="ativado">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">account_circle</span>
+                    <h3>Perfil</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">receipt_long</span>
+                    <h3>Orders</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">insights</span>
+                    <h3>Analytics</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">email</span>
+                    <h3>Messages</h3>
+                    <b class="quant_mens">26</b>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">report</span>
+                    <h3>Reports</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">settings</span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">add</span>
+                    <h3>Add Product</h3>
+                </a>
+                <a href="/dashboard/templates/Home/index.html">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- ========================================== FIM DO ASIDE ================================= -->
+        <main>
+            <h1>Dashboard</h1>
+
+            <div class="data">
+                <input type="date">
+            </div>
+
+            <div class="conquistas">
+                <div class="total_cursos">
+                    <span class="material-icons-sharp">query_stats</span>
+                    <div class="meio">
+                        <div class="lef">
+                            <h3>Total de Cursos Disponíveis</h3>
+                            <h1>22 Cursos</h1>
+                        </div>
+                        <div class="progresso">
+                            <div class="numero">
+                                <a href="https://login.microsoftonline.com/3bc062e4-ac9d-4c17-b4dd-3aad637ff1ac/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-000000000000&response_mode=form_post&protectedtoken=true&response_type=code%20id_token&resource=00000003-0000-0ff1-ce00-000000000000&scope=openid&nonce=62BE9A7D7BB28B8BB0359A6F83156E7FAB48E5F24E27A3A5-000DA173E8B53827D88A602E345AE65F6DC990A20B4885E7DFFEB195AD265573&redirect_uri=https%3A%2F%2Fscaniaazureservices.sharepoint.com%2F_forms%2Fdefault.aspx&state=OD0w&claims=%7B%22id_token%22%3A%7B%22xms_cc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&wsucxt=1&cobrandid=11bd8083-87e0-41b5-bb78-0bc43c8a8e8a&client-request-id=37462ca0-10b2-3000-fb27-25120a3b59a4&sso_reload=true"target="_blank" class="btn btn-white btn-animate">Cursos</a>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="light_text">Últimas 24 Horas</small>
+                </div>
+                <!-- ============================ FIM DO TOTAL DE CURSOS ======================================= -->
+                <div class="total_cursos1">
+                    <span class="material-icons-sharp">pending_actions</span>
+                    <div class="meio">
+                        <div class="lef">
+                            <h3>Total de Cursos Disponíveis</h3>
+                            <h1>22 Cursos</h1>
+                        </div>
+                        <div class="progresso">
+                            <div class="numero">
+                                <a href="https://login.microsoftonline.com/3bc062e4-ac9d-4c17-b4dd-3aad637ff1ac/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-000000000000&response_mode=form_post&protectedtoken=true&response_type=code%20id_token&resource=00000003-0000-0ff1-ce00-000000000000&scope=openid&nonce=62BE9A7D7BB28B8BB0359A6F83156E7FAB48E5F24E27A3A5-000DA173E8B53827D88A602E345AE65F6DC990A20B4885E7DFFEB195AD265573&redirect_uri=https%3A%2F%2Fscaniaazureservices.sharepoint.com%2F_forms%2Fdefault.aspx&state=OD0w&claims=%7B%22id_token%22%3A%7B%22xms_cc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&wsucxt=1&cobrandid=11bd8083-87e0-41b5-bb78-0bc43c8a8e8a&client-request-id=37462ca0-10b2-3000-fb27-25120a3b59a4&sso_reload=true"target="_blank" class="btn btn-white btn-animate">Cursos</a>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="light_text">Últimas 24 Horas</small>
+                </div>
+                <!-- ============================ FIM DAS EXPANSOES ======================================= -->
+                <div class="total_cursos2">
+                    <span class="material-icons-sharp">line_axis</span>
+                    <div class="meio">
+                        <div class="lef">
+                            <h3>Total de Cursos Disponíveis</h3>
+                            <h1>22 Cursos</h1>
+                        </div>
+                        <div class="progresso">
+                            <div class="numero">
+                                <a href="https://login.microsoftonline.com/3bc062e4-ac9d-4c17-b4dd-3aad637ff1ac/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-000000000000&response_mode=form_post&protectedtoken=true&response_type=code%20id_token&resource=00000003-0000-0ff1-ce00-000000000000&scope=openid&nonce=62BE9A7D7BB28B8BB0359A6F83156E7FAB48E5F24E27A3A5-000DA173E8B53827D88A602E345AE65F6DC990A20B4885E7DFFEB195AD265573&redirect_uri=https%3A%2F%2Fscaniaazureservices.sharepoint.com%2F_forms%2Fdefault.aspx&state=OD0w&claims=%7B%22id_token%22%3A%7B%22xms_cc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&wsucxt=1&cobrandid=11bd8083-87e0-41b5-bb78-0bc43c8a8e8a&client-request-id=37462ca0-10b2-3000-fb27-25120a3b59a4&sso_reload=true"target="_blank" class="btn btn-white btn-animate">Cursos</a>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="light_text">Últimas 24 Horas</small>
+                </div>
+                <!-- ============================ FIM DOS PROCESSOS ======================================= -->
+            </div>
+            <!-- ================================= FIM DA CONQUISTAS ========================================== -->
+
+            <div class="cursos_recentes">
+                <h2>Cursos Recentes</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome do Produto</th>
+                            <th>Número de Série</th>
+                            <th>Estilo</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--<tr>
+                            <td>Possiveis Cursos a Ser Realizados</td>
+                            <td>66273</td>
+                            <td>Simples</td>
+                            <td class="atencao">Pendente</td>
+                            <td class="principal">Detalhes</td>
+                        </tr>
+                        -->
+                </table>
+                <a href="#">Mostrar Todos</a>
+            </div>
+        </main>
+        <!-- FIM DO MAIN -->
+        <div class="right">
+            <div class="top">
+                <button id="btn_menu">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+                <div class="opcao_tema">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>Lucas</b></p>
+                        <small class="light_text">Usuário</small>
+                    </div>
+                    <div class="foto_perfil">
+                        <img src="/dashboard/templates/Images/fotografia-para-perfil.jpg">
+                    </div>
+                </div>
+            </div>
+            <!-- FIM DO TOP -->
+            <div class="recent_updates">
+                <h2>Atualizações Recentes</h2>
+                <div class="updates">
+                    <div class="update">
+                        <div class="foto_perfil">
+                            <img src="/dashboard/templates/Images/fotografia-para-perfil.jpg">
+                        </div>
+                        <div class="message">
+                            <p><b>Michel leandro</b> Recebeu essa ordem de 
+                                produto e esta no processo para realizar.</p>
+                                <small class="light_text">2 minutos atrás</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="foto_perfil">
+                            <img src="/dashboard/templates/Images/fotografia-para-perfil.jpg">
+                        </div>
+                        <div class="message">
+                            <p><b>Michel leandro</b> Recebeu essa ordem de 
+                                produto e esta no processo para realizar.</p>
+                                <small class="light_text">2 minutos atrás</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="foto_perfil">
+                            <img src="/dashboard/templates/Images/fotografia-para-perfil.jpg">
+                        </div>
+                        <div class="message">
+                            <p><b>Michel leandro</b> Recebeu essa ordem de 
+                                produto e esta no processo para realizar.</p>
+                                <small class="light_text">2 minutos atrás</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="foto_perfil">
+                            <img src="/dashboard/templates/Images/fotografia-para-perfil.jpg">
+                        </div>
+                        <div class="message">
+                            <p><b>Michel leandro</b> Recebeu essa ordem de 
+                                produto e esta no processo para realizar.</p>
+                                <small class="light_text">2 minutos atrás</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- =============================== FIM DO RECENT UPDATES =============================== -->
+        
+            <div class="cursos_compras">
+                <h2>Compras Disponíveis</h2>
+                <div class="item online">
+                    <div class="icon">
+                        <span class="material-icons-sharp active">shopping_cart</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>ORDENS DE COMPRAS</h3>
+                            <small class="light_text">Ultimas 24 horas</small>
+                        </div>
+                        <h5 class="sucesso">+44%</h5>
+                        <h3>3754</h3>
+                    </div>
+                </div>
+                <div class="item offline">
+                    <div class="icon">
+                        <span class="material-icons-sharp active">library_books</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>COMPRAS EM ESPERA</h3>
+                            <small class="light_text">Ultimas 24 horas</small>
+                        </div>
+                        <h5 class="secundario">-29%</h5>
+                        <h3>20034</h3>
+                    </div>
+                </div>
+                <div class="item done">
+                    <div class="icon">
+                        <span class="material-icons-sharp active">school</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>CURSOS CONCLUÍDOS</h3>
+                            <small class="light_text">Ultimas 24 horas</small>
+                        </div>
+                        <h5 class="sucesso">+13%</h5>
+                        <h3>34</h3>
+                    </div>
+                </div>
+                <div class="item add_product">
+                    <div>
+                        <span class="material-icons-sharp active">add</span>
+                        <h3>Adicionar Produtos</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="back"></div>
+    <script src="/dashboard/templates/JS/orders.js"></script>
+    <script src="/dashboard/templates/JS/Index.js"></script>
+    <script>
+        var i = setInterval(function () {
+        
+            clearInterval(i);
+    
+            
+            document.getElementById("preloader").style.display = "none";
+            document.getElementById(".container").style.display = "inline";
+    
+        }, 5000);
+    
+    
+        "use strict";
+        const loadingElement = document.getElementsByClassName("loading")[0];
+        setTimeout(() => {
+            loadingElement.classList.add("active");
+        }, 10);
+        window.addEventListener("click", () => {
+            loadingElement.classList.remove("loading");
+            setTimeout(() => {
+                loadingElement.classList.add("loading");
+            }, 10);
+        });
+    </script>
+</body>
+</html>
