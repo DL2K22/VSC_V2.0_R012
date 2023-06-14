@@ -1,13 +1,32 @@
 var timerElement = document.getElementById('timer');
 document.getElementById("btnmenu1").disabled = false;
+const botoes = document.getElementById('btnmenu');
 var bodyElement = document.body;
 var intervalId;
 var totalSeconds = 5; // 7 minutos em segundos
 
 function startCountdown() {
     intervalId = setInterval(updateCountdown, 1000);
-    document.getElementById("btnmenu1").disabled = true;
+
 }
+
+function limparSelecao() {
+    for (let i = 0; i < botoes.length; i++) {
+      botoes[i].classList.remove('clicked');
+    }
+  }
+  
+  // Adicionar eventos de clique a todos os botões
+  for (let i = 0; i < botoes.length; i++) {
+    botoes[i].addEventListener('click', function() {
+      limparSelecao(); // Limpar seleção de botões
+      this.classList.add('clicked'); // Adicionar classe 'clicked' ao botão atual
+    });
+  }
+setTimeout(function() {
+    botoes.classList.remove('efeito');
+}, 500);
+
 
 function updateCountdown() {
     if (totalSeconds < 0) {
@@ -27,11 +46,11 @@ function pad(value) {
     return value < 10 ? '0' + value : value;
 }
 
-function stopCountdown() {
-    clearInterval(intervalId);
-    clearInterval(intervalId_stoptime);
-    document.getElementById("btnmenu1").disabled = false;
-}
+
+
+
+
+
 
 
 
@@ -57,12 +76,20 @@ function pad(value) {
     return value < 10 ? '0' + value : value;
 }
 
+
+
+
+
+
+
+
 function stopCountdown() {
-    clearInterval(intervalId_stoptime);
     clearInterval(intervalId);
+    clearInterval(intervalId_stoptime);
+
+    botao.classList.add('clickedoff');
     document.getElementById("btnmenu1").disabled = false;
 }
-
 
 function resetCountdown() {
     bodyElement.classList.add('white-background');
@@ -81,6 +108,11 @@ function resetCountdown() {
     seconds_andon = 0;
     timerElement_andon.textContent = '00:00';
 }
+
+
+
+
+
 
 
 

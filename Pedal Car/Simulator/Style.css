@@ -221,6 +221,69 @@ body {
     padding: 5%;
 }
 
+
+
+
+
+
+#btnmenu{
+    background-color: rgba(255,255,255,1);
+    transition: background-color 0.5s;
+}
+#btnmenu:before,
+#btnmenu:after {
+  position: absolute;
+  content: "";
+  height: 0%;
+  width: 1px;
+ box-shadow:
+   -1px -1px 20px 0px rgba(255,255,255,1),
+   -4px -4px 5px 0px rgba(255,255,255,1),
+   7px 7px 20px 0px rgba(0,0,0,.4),
+   4px 4px 5px 0px rgba(0,0,0,.3);
+}
+#btnmenu:before {
+  right: 0;
+  top: 0;
+  transition: all 500ms ease;
+}
+#btnmenu:after {
+  left: 0;
+  bottom: 0;
+  transition: all 500ms ease;
+}
+#btnmenu:hover{
+  background: transparent;
+  color: #76aef1;
+  box-shadow: none;
+}
+#btnmenu:hover:before {
+  transition: all 500ms ease;
+  height: 100%;
+}
+#btnmenu:hover:after {
+  transition: all 500ms ease;
+  height: 100%;
+}
+#btnmenu.clicked {
+    background-color: rgb(205,209,219,1);
+    transition: background-color 0.5s;
+}
+#btnmenu.clickedoff{
+    background-color: rgb(255, 255, 255);
+    transition: background-color 0.5s;
+}
+#btnmenu.efeito{
+    scale:10px;
+}
+
+
+
+
+
+
+
+
 .buttons1{
     width: 10%;
     margin-right: 15%;
@@ -228,6 +291,7 @@ body {
 .play{
     width: 100%;
 }
+
 
 .buttons2{
     width: 10%;
