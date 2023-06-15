@@ -45,7 +45,7 @@
                     <span id="andon">00:00</span>
                 </div>
                 <div class="botbox3">
-                    <button type="button" class="btn">
+                    <button type="button" class="btn_andon">
                         <span>
                           <b></b>
                           <svg viewBox="-5.5 -5.5 71 71" id="circle">
@@ -58,16 +58,23 @@
         </div>
 
         <div class="botmenu"> 
-            <div class="buttons1">  
-                <button id = "btnmenu" onclick="startCountdown()" disabled><img src="Pictures/playbutton.png" alt="play" class="play"></button>
-            </div>
-            <div class="buttons2"> 
-                <button id = "btnmenu" onclick="stopCountdown()"><img src="Pictures/stopbutton.png" alt="stop" class="stop"></button>
-            </div>
-            <div class="buttons3"> 
-                <button id = "btnmenu" onclick="resetCountdown()"><img src="Pictures/resetbutton.png" alt="reset" class="reset"></button>
-            </div>
-        </div>
+            <div class="btns-wrapper">
+                <div class="btn">
+                  <div class="inner-wrapper">
+                    <i onclick=startCountdown() class="material-icons-round">play_arrow</i>
+                  </div>
+                </div>
+                <div class="btn">
+                  <div class="inner-wrapper">
+                    <i onclick=stopCountdown() class="material-icons-round">pause</i>
+                  </div>
+                </div>
+                <div class="btn">
+                  <div class="inner-wrapper">
+                    <i onclick=resetCountdown() class="material-icons-round">skip_next</i>
+                  </div>
+                </div>
+              </div>
 
     </Section>
 

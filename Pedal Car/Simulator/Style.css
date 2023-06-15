@@ -1,11 +1,13 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display');
+@import url('https://fonts.googleapis.com/css?family=Material+Icons+Round');
 
 :root {
     --timing: cubic-bezier(.645,.045,.355,1);
 }
 
 *{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Major Mono Display', monospace;
 }
 
 header{
@@ -203,19 +205,7 @@ body {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
 }
-.botmenu button {
-    width: 100%;
-    margin-bottom: 5%;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    border: none;
-    cursor: pointer;
-    border-radius: 100px;
-    background-color: transparent;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    background-color: #ececec;
-}
+
 
 .botmenu img {
     padding: 5%;
@@ -224,11 +214,16 @@ body {
 
 
 
-
-
 #btnmenu{
-    background-color: rgba(255,255,255,1);
-    transition: background-color 0.5s;
+  width: 100%;
+  margin-bottom: 5%;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 100px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 #btnmenu:before,
 #btnmenu:after {
@@ -265,19 +260,56 @@ body {
   transition: all 500ms ease;
   height: 100%;
 }
-#btnmenu.clicked {
-    background-color: rgb(205,209,219,1);
-    transition: background-color 0.5s;
-}
-#btnmenu.clickedoff{
-    background-color: rgb(255, 255, 255);
-    transition: background-color 0.5s;
-}
-#btnmenu.efeito{
-    scale:10px;
-}
 
 
+.btns-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  padding: 18px;
+  gap: 24px;
+  transform: scale(3);
+}
+
+.btn {
+  width: 100%;
+  margin-bottom: 5%;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  position: relative;
+  padding: 2px;
+  box-shadow: 4px 2px 16px rgba(136, 165, 191, 0.48), -4px -2px 16px #FFFFFF;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn .inner-wrapper {
+width: 100%;
+height: 100%;
+border-radius: 16px;
+transition: all .2s ease-in-out;
+display: grid;
+place-items: center;
+}
+
+.btn .inner-wrapper i {
+user-select: none;
+transition: all .2s ease-in-out;
+font-size: 32px;
+position: relative;
+color: rgba(201, 215, 230, 0.8);
+text-shadow: 2px 2px 2px #d6e1ef99, 0 0 0 #000, 2px 2px 2px #d6e1ef00;
+}
+
+.btn.active .inner-wrapper {
+box-shadow: inset 3px 3px 7px rgba(136, 165, 191, 0.48), inset -3px -3px 7px #FFFFFF;
+}
+
+.btn.active .inner-wrapper i {
+text-shadow: 1px 1px 1px #d6e1ef99, 0 0 0 #000, 1px 1px 1px #d6e1ef00;
+}
 
 
 
@@ -322,7 +354,7 @@ footer{
 
 
 .botbox3 button {
-    --w: 6em;
+    --w: 8em;
     --bg: rgb(var(--rgb));
     --bga: rgba(var(--rgb), .4); /* Safari fix */
     border: none;

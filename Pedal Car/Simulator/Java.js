@@ -1,6 +1,4 @@
 var timerElement = document.getElementById('timer');
-document.getElementById("btnmenu1").disabled = false;
-const botoes = document.getElementById('btnmenu');
 var bodyElement = document.body;
 var intervalId;
 var totalSeconds = 5; // 7 minutos em segundos
@@ -9,24 +7,6 @@ function startCountdown() {
     intervalId = setInterval(updateCountdown, 1000);
 
 }
-
-function limparSelecao() {
-    for (let i = 0; i < botoes.length; i++) {
-      botoes[i].classList.remove('clicked');
-    }
-  }
-  
-  // Adicionar eventos de clique a todos os botões
-  for (let i = 0; i < botoes.length; i++) {
-    botoes[i].addEventListener('click', function() {
-      limparSelecao(); // Limpar seleção de botões
-      this.classList.add('clicked'); // Adicionar classe 'clicked' ao botão atual
-    });
-  }
-setTimeout(function() {
-    botoes.classList.remove('efeito');
-}, 500);
-
 
 function updateCountdown() {
     if (totalSeconds < 0) {
@@ -48,7 +28,11 @@ function pad(value) {
 
 
 
+const btns = document.querySelectorAll('.btn');
 
+for (let btn of btns) {
+  btn.onclick = () => btn.classList.toggle('active');
+}
 
 
 
@@ -116,7 +100,7 @@ function resetCountdown() {
 
 
 
-const btn = document.querySelector('.btn');
+const btn = document.querySelector('.btn_andon');
 const heading = document.querySelector('.heading');
 var timerElement_andon = document.getElementById("andon");
 var intervalId_andon;
