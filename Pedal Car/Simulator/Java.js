@@ -146,7 +146,7 @@ function clickHandler() {
   }
   else{
     btn.classList.add('animating');
-    andon.classList.add('andoninativo');
+    andon.classList.remove('andonativo');
     clearInterval(intervalId_andon);
   }
   

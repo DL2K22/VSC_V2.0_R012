@@ -149,10 +149,6 @@ body {
     background-color: #fffb19;
     transition: background-color 2s ease-in-out;
 }
-.andoninativo{
-    background-color: #E7E9EE;
-    transition: background-color 2s ease-in-out;
-}
 .topbox3 img{
     position: relative;
     left: 24%;
@@ -169,7 +165,6 @@ body {
 .botbox3{
     display: flex;
     align-items: center;
-    margin-bottom: 10%;
 }
 .botbox3 button {
     border: none;
@@ -363,6 +358,7 @@ footer{
     height: var(--w);
     background: var(--bg);
     box-shadow: 0 3px 12px 2px var(--bga);
+    bottom: 15%;
     border-radius: 50%;
     position: relative;
     overflow: hidden;
