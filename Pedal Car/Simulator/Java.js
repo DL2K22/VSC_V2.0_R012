@@ -5,7 +5,8 @@ var totalSeconds = 5; // 7 minutos em segundos
 
 function startCountdown() {
     intervalId = setInterval(updateCountdown, 1000);
-
+    document.getElementById("play").disabled = true;
+    
 }
 
 function updateCountdown() {
@@ -71,12 +72,12 @@ function stopCountdown() {
     clearInterval(intervalId);
     clearInterval(intervalId_stoptime);
 
-    botao.classList.add('clickedoff');
-    document.getElementById("btnmenu1").disabled = false;
+    document.getElementById("play").disabled = false;
+    document.getElementById("pause").disabled = true;
 }
 
 function resetCountdown() {
-    bodyElement.classList.add('white-background');
+    bodyElement.classList.remove('red-background');
 
     clearInterval(intervalId_stoptime);
     minutes_stoptime = 0;
