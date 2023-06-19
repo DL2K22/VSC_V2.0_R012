@@ -3,14 +3,21 @@ var bodyElement = document.body;
 var intervalId;
 var totalSeconds = 5; // 7 minutos em segundos
 
+const startBtn = document.getElementById('botao');
+let isTimerRunning = false;
+
+
 function startCountdown() {
-    intervalId = setInterval(updateCountdown, 1000);
-    document.getElementById("play").disabled = true;
-    
+    if (isTimerRunning) {
+        return; // Timer is already running, do nothing
+      }
+      intervalId = setInterval(updateCountdown, 1000);
+      isTimerRunning = true;
 }
 
 function updateCountdown() {
     if (totalSeconds < 0) {
+        isTimerRunning = false;
         clearInterval(intervalId);
         bodyElement.classList.add('red-background');
         startstoptime();
@@ -30,10 +37,27 @@ function pad(value) {
 
 
 const btns = document.querySelectorAll('.btn');
+let activeBtn = null;
 
-for (let btn of btns) {
-  btn.onclick = () => btn.classList.toggle('active');
+btns.forEach(btn => {
+  btn.addEventListener('click', animation);
+});
+
+function animation() {
+  if (activeBtn === this) {
+    return; // Clicked on the same button again, no action needed
+  }
+
+  if (activeBtn) {
+    activeBtn.classList.remove('active');
+    document.getElementById("botao").disabled = false;
+  }
+
+  this.classList.add('active');
+  document.getElementById("botao").disabled = true;
+  activeBtn = this;
 }
+
 
 
 
@@ -72,8 +96,6 @@ function stopCountdown() {
     clearInterval(intervalId);
     clearInterval(intervalId_stoptime);
 
-    document.getElementById("play").disabled = false;
-    document.getElementById("pause").disabled = true;
 }
 
 function resetCountdown() {

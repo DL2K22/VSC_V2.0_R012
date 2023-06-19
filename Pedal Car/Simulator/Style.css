@@ -205,52 +205,12 @@ body {
 
 
 
-#btnmenu{
-  width: 100%;
-  margin-bottom: 5%;
-  display: flex;
-  justify-content: center;
-  justify-items: center;
-  border: none;
-  cursor: pointer;
-  border-radius: 100px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-#btnmenu:before,
-#btnmenu:after {
-  position: absolute;
-  content: "";
-  height: 0%;
-  width: 1px;
- box-shadow:
-   -1px -1px 20px 0px rgba(255,255,255,1),
-   -4px -4px 5px 0px rgba(255,255,255,1),
-   7px 7px 20px 0px rgba(0,0,0,.4),
-   4px 4px 5px 0px rgba(0,0,0,.3);
-}
-#btnmenu:before {
-  right: 0;
-  top: 0;
-  transition: all 500ms ease;
-}
-#btnmenu:after {
-  left: 0;
-  bottom: 0;
-  transition: all 500ms ease;
-}
-#btnmenu:hover{
-  background: transparent;
-  color: #76aef1;
-  box-shadow: none;
-}
-#btnmenu:hover:before {
-  transition: all 500ms ease;
-  height: 100%;
-}
-#btnmenu:hover:after {
-  transition: all 500ms ease;
-  height: 100%;
-}
+
+
+
+
+
+
 
 
 .btns-wrapper {
@@ -301,7 +261,6 @@ box-shadow: inset 3px 3px 7px rgba(136, 165, 191, 0.48), inset -3px -3px 7px #FF
 .btn.active .inner-wrapper i {
 text-shadow: 1px 1px 1px #d6e1ef99, 0 0 0 #000, 1px 1px 1px #d6e1ef00;
 }
-
 
 
 
