@@ -107,7 +107,7 @@ function resetCountdown() {
     timerElement_stoptime.textContent = '00:00';
 
     clearInterval(intervalId);
-    totalSeconds = 7 * 60;
+    totalSeconds = 5;
     timerElement.textContent = '07:00';
 
     clearInterval(intervalId_andon);
