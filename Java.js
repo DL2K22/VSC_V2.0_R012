@@ -1,7 +1,7 @@
 var timerElement = document.getElementById('timer');
 var bodyElement = document.body;
 var intervalId;
-var totalSeconds = 5; // 7 minutos em segundos
+var totalSeconds = 7 * 60; // 7 minutos em segundos
 
 const startBtn = document.getElementById('botao');
 let isTimerRunning = false;
@@ -95,6 +95,12 @@ function pad(value) {
 function stopCountdown() {
     clearInterval(intervalId);
     clearInterval(intervalId_stoptime);
+    clearInterval(intervalId_andon);
+
+    btn.classList.remove('animating');
+    andon.classList.remove('andonativo');
+    btn.classList.remove('active');
+    heading.classList.remove('active');
 
 }
 
@@ -107,14 +113,17 @@ function resetCountdown() {
     timerElement_stoptime.textContent = '00:00';
 
     clearInterval(intervalId);
-    totalSeconds = 5;
+    totalSeconds = 7 * 60;
     timerElement.textContent = '07:00';
 
     clearInterval(intervalId_andon);
-    clickHandler();
     minutes_andon = 0;
     seconds_andon = 0;
     timerElement_andon.textContent = '00:00';
+    btn.classList.remove('animating');
+    andon.classList.remove('andonativo');
+    btn.classList.remove('active');
+    heading.classList.remove('active');
 }
 
 
