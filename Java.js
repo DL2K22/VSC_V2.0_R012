@@ -111,6 +111,7 @@ function resetCountdown() {
     timerElement.textContent = '07:00';
 
     clearInterval(intervalId_andon);
+    clickHandler();
     minutes_andon = 0;
     seconds_andon = 0;
     timerElement_andon.textContent = '00:00';
