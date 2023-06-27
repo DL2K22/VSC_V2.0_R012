@@ -8,8 +8,6 @@
 }
 *{
     font-family: 'Orbitron', sans-serif;
-    font-weight: bold;
-    line-height: 1rem;
     letter-spacing: 5px;
 }
 
@@ -28,7 +26,6 @@ body {
 }
 footer{
   position: absolute;
-  bottom: 0;
   background-color: rgba(4,30,66,1);
   border-bottom: 1px ridge rgba(2, 17, 37, 0.8);
   opacity: 100%;
@@ -36,6 +33,7 @@ footer{
   width: 100%;
   text-align: center;
   line-height: 0px;
+  bottom: 0;
 }
 
 
@@ -62,19 +60,18 @@ footer{
 }
 .pedalcar img{
     position: relative;
-    width: 40%;
+    width: 20%;
     margin-top: 1%;
 }
 
 
 .container {
     display: flex;
-    flex-direction: row;
+    position: absolute;
     justify-content: center;
     justify-items: center;
     align-items: center;
-    position: relative;
-    margin-top: 2%;
+    height: 50%;
 }
 
 
@@ -100,8 +97,8 @@ footer{
 
 
 .box1 {
-  width: 300px;
-  height: 300px;
+  width: 25%;
+  height: 100%;
   margin-right: 5%;
   background: #fff;
   display: flex;
@@ -113,8 +110,8 @@ footer{
   background-color: #E7E9EE;
 }
 .box2 {
-    width: 300px;
-    height: 300px;
+    width: 25%;
+    height: 100%;
     background: #fff;
     display: flex;
     flex-direction: column;
@@ -125,8 +122,8 @@ footer{
     background-color: #E7E9EE;
 }
 .box3 {
-  width: 300px;
-  height: 300px;
+  width: 25%;
+  height: 100%;
   margin-left: 5%;
   display: flex;
   flex-direction: column;
@@ -148,19 +145,19 @@ footer{
 .topbox1 img{
   position: relative;
   left: 31%;
-  top: 20px;
+  top: 10px;
   width: 38%;
 }
 .topbox2 img{
     position: relative;
     left: 14.5%;
-    top: 20px;
+    top: 10px;
     width: 70%;
 }
 .topbox3 img{
   position: relative;
   left: 24%;
-  top: 20px;
+  top: 10px;
   width: 50%;
 }
 
@@ -182,23 +179,25 @@ footer{
 
 
 .midbox1{
-  height: 80%;
   display: flex;
   align-items: center;
-  font-size: 50px;
+  position: relative;
+  margin-top: 20%;
+  font-size: 40px;
 }
 .midbox2{
-  height: 80%;
   display: flex;
   align-items: center;
-  font-size: 50px;
+  position: relative;
+  margin-top: 20%;
+  font-size: 40px;
 }
 .midbox3{
-    height: 80%;
-    display: flex;
-    align-items: center;
-    font-size: 50px;
-    margin-top: 15%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 20%;
+  font-size: 40px;
 }
 
 
@@ -206,9 +205,27 @@ footer{
 
 
 
+
+.botbox1{
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: auto;
+  font-size: 20px;
+}
+.botbox2{
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: auto;
+  font-size: 20px;
+}
 .botbox3{
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: auto;
+  font-size: 20px;
 }
 .botbox3 button {
     border: none;
@@ -228,28 +245,22 @@ footer{
 
 .botmenu{
     display: flex;
-    width: 32.05em;
-    font-size: 1.5em;
+    width: 80%;
+    position: absolute;
+    bottom: 0;
 
-    position: relative;
     align-items: center;
     justify-content: center;
 
-    margin-top: 5%;
-    margin-left: auto;
-    margin-right: auto;
+    bottom: 15%;
+    left: 10%;
+    right: 10%;
 
-    padding-top: 8px;
-    padding-bottom: 8px;
-    bottom: 0;
 
     background-color: #eee;
     border-style: none;
     box-shadow: 5px 4px 20px rgba(63, 63, 63, 0.25);
     border-radius: 10px 50px;
-}
-.botmenu img {
-    padding: 5%;
 }
 
 
@@ -267,9 +278,9 @@ footer{
   display: grid;
   grid-auto-flow: column;
   grid-column: auto;
-  padding: 18px;
+  padding: 10px;
   gap: 50px;
-  transform: scale(3);
+  transform: scale(1.5);
 }
 .btn {
   width: 100%;
@@ -356,7 +367,7 @@ text-shadow: 1px 1px 1px #d6e1ef99, 0 0 0 #000, 1px 1px 1px #d6e1ef00;
     --bg: rgb(var(--rgb));
     --bga: rgba(var(--rgb), .4); /* Safari fix */
     border: none;
-    font-size: 60%;
+    font-size: 30%;
     width: var(--w);
     height: var(--w);
     background: var(--bg);
@@ -375,7 +386,7 @@ text-shadow: 1px 1px 1px #d6e1ef99, 0 0 0 #000, 1px 1px 1px #d6e1ef00;
     --bg: rgb(var(--rgb));
     --bga: rgba(var(--rgb), .4); /* Safari fix */
     border: none;
-    font-size: 60%;
+    font-size: 30%;
     width: var(--w);
     height: var(--w);
     background: var(--bg);
@@ -434,7 +445,7 @@ text-shadow: 1px 1px 1px #d6e1ef99, 0 0 0 #000, 1px 1px 1px #d6e1ef00;
     margin-top: 5px;
   }
   .botbox3 button b {
-    --w: 7px;
+    --w: 4px;
     overflow: hidden;
     border-radius: var(--w);
     display: grid;
@@ -467,12 +478,12 @@ text-shadow: 1px 1px 1px #d6e1ef99, 0 0 0 #000, 1px 1px 1px #d6e1ef00;
     stroke-linecap: round;
     stroke-dasharray: var(--dash);
     stroke-dashoffset: var(--dash);
-    width: 46px;
-    height: 46px;
+    width: 35px;
+    height: 35px;
     transform: scaleX(-1) rotate(-89deg);
     transition: .4s;
     transition-timing-function: var(--timing);
-    margin: auto;
+    margin-bottom: 3px;
     position: relative;
     z-index: 1;
     will-change: transform, stroke-dashoffset;
