@@ -215,6 +215,16 @@ footer{
   margin-top: auto;
   font-size: 20px;
 }
+.botbox1 button {
+  --w: 8em;
+  position: relative;
+  bottom: 15%;
+  font-size: 30%;
+  width: var(--w);
+  height: var(--w);
+  overflow: hidden;
+  visibility: hidden;
+}
 .botbox2{
   display: flex;
   align-items: center;
@@ -230,6 +240,7 @@ footer{
   width: var(--w);
   height: var(--w);
   overflow: hidden;
+  visibility: hidden;
 }
 .botbox3{
   display: flex;
