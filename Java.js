@@ -66,8 +66,13 @@ function animation() {
 var timerElement_stoptime = document.getElementById('stoptime');
 var intervalId_stoptime;
 var minutes_stoptime = 0, seconds_stoptime = 0;
+let isStopTimeRunning = false;
 
 function startstoptime() {
+    if (isStopTimeRunning) {
+      return; // Timer is already running, do nothing
+    }
+    isStopTimeRunning = true;
     intervalId_stoptime = setInterval(updatestoptime, 1000);
 }
 
@@ -94,6 +99,7 @@ function pad(value) {
 
 function stopCountdown() {
     isTimerRunning = false;
+    isStopTimeRunning = false;
     clearInterval(intervalId);
     clearInterval(intervalId_stoptime);
     clearInterval(intervalId_andon);
@@ -107,6 +113,7 @@ function stopCountdown() {
 
 function resetCountdown() {
     isTimerRunning = false;
+    isStopTimeRunning = false;
     bodyElement.classList.remove('red-background');
 
     clearInterval(intervalId_stoptime);
