@@ -93,6 +93,7 @@ function pad(value) {
 
 
 function stopCountdown() {
+    isTimerRunning = false;
     clearInterval(intervalId);
     clearInterval(intervalId_stoptime);
     clearInterval(intervalId_andon);
@@ -105,6 +106,7 @@ function stopCountdown() {
 }
 
 function resetCountdown() {
+    isTimerRunning = false;
     bodyElement.classList.remove('red-background');
 
     clearInterval(intervalId_stoptime);
