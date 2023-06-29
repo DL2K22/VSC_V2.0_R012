@@ -74,6 +74,13 @@ function startstoptime() {
     }
     isStopTimeRunning = true;
     intervalId_stoptime = setInterval(updatestoptime, 1000);
+
+    clearInterval(intervalId_andon);
+
+    btn.classList.remove('animating');
+    andon.classList.remove('andonativo');
+    btn.classList.remove('active');
+    heading.classList.remove('active');
 }
 
 function updatestoptime() {
