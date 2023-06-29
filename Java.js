@@ -1,7 +1,7 @@
 var timerElement = document.getElementById('timer');
 var bodyElement = document.body;
 var intervalId;
-var totalSeconds = 2; // 7 minutos em segundos
+var totalSeconds = 10; // 7 minutos em segundos
 
 const startBtn = document.getElementById('botao');
 let isTimerRunning = false;
@@ -129,7 +129,7 @@ function resetCountdown() {
     timerElement_stoptime.textContent = '00:00';
 
     clearInterval(intervalId);
-    totalSeconds = 2;
+    totalSeconds = 10;
     timerElement.textContent = '07:00';
 
     clearInterval(intervalId_andon);
