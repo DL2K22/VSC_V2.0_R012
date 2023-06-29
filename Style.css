@@ -280,7 +280,6 @@ footer{
   box-shadow: inset 3px 12px 2px var(--bga);
   bottom: 15%;
   border-radius: 50%;
-  border-style: inset;
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -356,7 +355,9 @@ footer{
   transition: .5s;
 }
 .botbox3 button.active b:before {
-  transform: translateY(12px);
+  transform: translateY(30%);
+  width: 100%;
+  height: 60%;
   transition-delay: .27s;
   transition-timing-function: cubic-bezier(.25, .25, .25, 1.25);
 }
