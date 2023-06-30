@@ -48,6 +48,7 @@
 .toggle-btn i{
   transition: transform 0.8s ease-in-out;
   margin-left: 2%;
+  text-decoration-line: none;
 }
 .toggle-btn:hover{
   box-shadow: 6px 6px 24px #f7f8fc, -6px -6px 24px #d2d5ef, inset -6px -6px 24px #f7f8fc, inset 6px 6px 24px #d2d5ef;
@@ -73,6 +74,7 @@
   opacity: 0;
   transition: transform 0.8s ease-in-out, opacity 0.5s;
   z-index: 1;
+  text-decoration-line: none;
 }
 .nav-link:nth-child(1){
   transition-delay: 0.2s;
@@ -92,6 +94,7 @@
   scale: 1.5;
   margin-right: 2%;
   margin-top: 3%;
+  text-decoration-line: none;
 }
 /* Mover ícones */
 .active ~ ul .nav-link{

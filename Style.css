@@ -49,6 +49,7 @@
 .toggle-btn i {
   transition: transform 0.8s ease-in-out;
   margin-left: 2%;
+  text-decoration-line: none;
 }
 
 .toggle-btn:hover {
@@ -79,6 +80,7 @@
   opacity: 0;
   transition: transform 0.8s ease-in-out, opacity 0.5s;
   z-index: 1;
+  text-decoration-line: none;
 }
 
 .nav-link:nth-child(1) {
@@ -103,6 +105,7 @@
   scale: 1.5;
   margin-right: 2%;
   margin-top: 3%;
+  text-decoration-line: none;
 }
 
 /* Mover ícones */
