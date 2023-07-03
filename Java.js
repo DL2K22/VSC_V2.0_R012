@@ -246,3 +246,15 @@ nav.addEventListener("mouseup", () =>{
 nav.addEventListener("mouseleave", () =>{
     nav.removeEventListener("mousemove", onDrag);
 });
+
+
+
+
+
+
+
+window.onload = function()
+{
+  var optionOne = document.querySelector('.option--one');
+  optionOne.focus();
+}

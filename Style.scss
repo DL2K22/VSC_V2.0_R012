@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 
 
 :root {
@@ -12,107 +12,79 @@
 }
 
 
-.nav{
-  position: absolute;
+
+
+
+.container_menu {
   display: flex;
-  top: 20px;
-  right: 20px;
-  height: auto;
-  background-color: transparent;
-  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  width: 100%;
+  height: 5%;
+  flex-flow: row wrap;
   justify-content: center;
-  cursor: grab;
 }
-.nav-container{
-  position: relative;
-}
-.toggle-btn, .nav-icon{
+
+.option {
+  flex: 1 1 2em;
+  color: #f0f0f0;
+  font-size: 10px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: #fafaff;
-  border-radius: 50%;
-}
-.toggle-btn{
-  position: relative;
-  display: flex;
-  width: 60px;
-  height: 60px;
-  font-size: 35px;
-  color: #4957d4;
-  box-shadow: -6px -6px 24px #f7f8fc, 6px 6px 24px #d2d5ef, inset 6px 6px 24px #f7f8fc, inset -6px -6px 24px #d2d5ef;
-  transition: box-shadow 0.3s ease-in-out, transform 0.3s;
+  z-index: 2;
   cursor: pointer;
-  z-index: 10;
+  border: none;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -ms-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.toggle-btn i{
-  transition: transform 0.8s ease-in-out;
-  margin-left: 2%;
-  text-decoration-line: none;
+
+.option--four {
+  background: #104e5a;
+  box-shadow: 0px 10px 40px #104e5a;
 }
-.toggle-btn:hover{
-  box-shadow: 6px 6px 24px #f7f8fc, -6px -6px 24px #d2d5ef, inset -6px -6px 24px #f7f8fc, inset 6px 6px 24px #d2d5ef;
-  transform: scale(0.95);
+.option--four::before {
+  background: #104e5a;
 }
-.nav-icon, .nav-link{
-  width: 40px;
-  height: 40px;
-  margin-top: 10%;
+
+.option--three {
+  background: #142136;
+  box-shadow: 0px 10px 40px #142136;
 }
-.nav-icon{
-  font-size: 16px;
-  color: #363745;
-  box-shadow: -4px -4px 16px #f7f8fc, 4px 4px 16px #d9dcf2, inset 4px 4px 16px #f7f8fc, inset -4px -4px 16px #d9dcf2;
-  transition: box-shadow 0.3s ease-in-out;
+.option--three::before {
+  background: #142136;
 }
-.nav-icon:hover{
-  box-shadow: 4px 4px 16px #f7f8fc, -4px -4px 16px #d9dcf2, inset -4px -4px 16px #f7f8fc, inset 4px 4px 16px #d9dcf2;
+.option--two {
+  background: #d51515;
+  box-shadow: 0px 10px 40px #d51515;
 }
-.nav-link{
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transition: transform 0.8s ease-in-out, opacity 0.5s;
-  z-index: 1;
-  text-decoration-line: none;
+.option--two::before {
+  background: #d51515;
 }
-.nav-link:nth-child(1){
-  transition-delay: 0.2s;
+.option--one {
+  background: #e57910;
+  box-shadow: 0px 10px 40px #e57910;
 }
-.nav-link:nth-child(2){
-  transition-delay: 0.2s;
+
+.option:focus {
+  flex-basis: 9em;
+  outline: none;
 }
-.nav-link:nth-child(3){
-  transition-delay: 0.3s;
-}  
-.nav-link:nth-child(4){
-  transition-delay: 0.3s;
-}  
-/* Girar toggle */
-.active.toggle-btn i{
-  transform: rotate(135deg);
-  scale: 1.5;
-  margin-right: 2%;
-  margin-top: 3%;
-  text-decoration-line: none;
+.option span {
+  padding: 5px 5px 5px 5px;
 }
-/* Mover ícones */
-.active ~ ul .nav-link{
-  opacity: 1;
-  text-decoration-line: none;
-}
-.active ~ ul .nav-link:nth-child(1){
-  transform: translate(-72px, 32px);
-}
-.active ~ ul .nav-link:nth-child(2){
-  transform: translate(-72px, -32px);
-}
-.active ~ ul .nav-link:nth-child(3){
-  transform: translate(-8px, -72px);
-}
-.active ~ ul .nav-link:nth-child(4){
-  transform: translate(-8px, 72px);
-}
+
+
+
+
 
 
 
@@ -130,19 +102,7 @@ body {
   background-size: 400% 400%;
   height: 100vh;
 }
-footer{
-  position: absolute;
-  background-color: rgba(4,30,66,1);
-  border-bottom: 1px ridge rgba(2, 17, 37, 0.8);
-  opacity: 100%;
-  color: white;
-  width: 100%;
-  height: 5%;
-  text-align: center;
-  line-height: 0px;
-  font-size: 8px;
-  bottom: 0;
-}
+
 
 
 
@@ -504,7 +464,7 @@ footer{
     align-items: center;
     justify-content: center;
 
-    bottom: 10%;
+    bottom: 12%;
     left: 25%;
     right: 25%;
 
