@@ -516,7 +516,7 @@ nav {
   --item-size: 2rem;
   --rounding: 0.75rem;
   --shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.4);
-  --bg-color: rgba(255, 255, 255, 0.5);
+  --bg-color: rgba(255, 255, 255, 0.1);
   --fg-color: rgba(0, 0, 0, 0.8);
   --hi-color: #0a22ff;
   
@@ -540,6 +540,13 @@ nav {
   z-index: 1;
 }
 
+nav:hover{
+  background: rgba(255, 255, 255, 0.5);
+  .icon{
+    color: #000;
+  }
+}
+
 nav a {
   display: grid;
   place-content: stretch;
@@ -556,6 +563,7 @@ nav .icon {
   font-size: 0.75rem;
   
   transition: color var(--transition);
+  color: rgba(0, 0, 0, 0.2);
 }
 
 nav .items {
@@ -701,6 +709,8 @@ nav.expanded .item:hover {
   height: 5%;
   flex-flow: row wrap;
   justify-content: center;
+  
+  
 }
 
 .option {
@@ -722,7 +732,7 @@ nav.expanded .item:hover {
 
 .option--four {
   background: #104e5a;
-  box-shadow: 0px 10px 20px #104e5a;
+  box-shadow: 0px 10px 30px #104e5a;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -732,7 +742,7 @@ nav.expanded .item:hover {
 
 .option--three {
   background: #142136;
-  box-shadow: 0px 10px 20px #142136;
+  box-shadow: 0px 10px 30px #142136;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -741,7 +751,7 @@ nav.expanded .item:hover {
 }
 .option--two {
   background: #d51515;
-  box-shadow: 0px 10px 20px #d51515;
+  box-shadow: 0px 10px 30px #d51515;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -750,7 +760,7 @@ nav.expanded .item:hover {
 }
 .option--one {
   background: #e57910;
-  box-shadow: 0px 10px 20px #e57910;
+  box-shadow: 0px 10px 30px #e57910;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }

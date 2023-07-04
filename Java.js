@@ -215,7 +215,3 @@ btn.addEventListener('click', clickHandler);
 
 
 
-
-
-
-
