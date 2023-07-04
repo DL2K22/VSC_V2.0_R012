@@ -7,18 +7,66 @@
     <title>Pedal Car - TAKT</title>
     <link rel="stylesheet" href="Style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
+
 
   <header>
     <img src="Pictures/Scania_Logo_seit_2016_(Coat_of_Arms).png" alt="logo" class="logo-principal">
     <img src="Pictures/letreiro-branco.png" alt="logo2" class="logo2">
   </header>
 
+  <nav>
+    <a href="#" class="toggle">
+      <div>
+        <div class="icon"><i class="fas fa-times"></i></div>
+        <div class="icon"><i class="fas fa-bars"></i></div>
+      </div>
+    </a>
+    <div class="items">
+      <a href="#" class="item">
+        <div class="icon">
+          <i class="far fa-chart-bar"></i>
+        </div>
+        <div class="label">
+          Dashboard
+        </div>
+      </a>
+      <a href="#" class="item">
+        <div class="icon">
+          <i class="far fa-edit"></i>
+        </div>
+        <div class="label">
+          Products
+        </div>
+      </a>
+      <a href="#" class="item">
+        <div class="icon">
+          <i class="far fa-envelope-open"></i>
+        </div>
+        <div class="label">
+          Inbox
+        </div>
+      </a>
+      <a href="#" class="item">
+        <div class="icon">
+          <i class="far fa-compass"></i>
+        </div>
+        <div class="label">
+          Guide
+        </div>
+      </a>
+    </div>
+  </nav>
+        
+      
   <div class="pedalcar">
     <img src="Pictures/pedalcar.png" alt="escrita" class="escrita">
   </div>
+
 
   <Section>
         <div id="container" class="container">
@@ -106,8 +154,23 @@
       <div class="option option--three" tabindex="0"><span class="material-symbols-outlined">directions_car</span>KART 2</div>
       <div class="option option--four" tabindex="0"><span class="material-symbols-outlined">directions_car</span>KART 3</div>
     </div>
-
   <script src="Java.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.js"></script>
+  <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+  <script src="https://cdpn.io/cpe/boomboom/pen.js?key=pen.js-a059aac9-cffc-55b0-a7ab-1e5bd986c9bf" crossorigin=""></script>
+  <script id="rendered-js">
+    const toggle = document.querySelector('nav .toggle');
+    toggle.addEventListener('click', e => {
+      e.currentTarget.parentElement.classList.
+      toggle('expanded');
+    });
+    //# sourceURL=pen.js
+        </script>
+  <script>window.onload = function()
+    {
+      var optionOne = document.querySelector('.option--one');
+      optionOne.focus();
+    }</script>
 
 </body>
 </html>
