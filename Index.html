@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedal Car - TAKT</title>
     <link rel="stylesheet" href="Style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
@@ -69,7 +67,10 @@
   </div>
 
 
-  <Section>
+<div class="print-tab" data-tab-id="1">
+  <div class="print-tab-content">
+    <div data-tab-content="tab1">
+      <Section>
         <div id="container" class="container">
             <div class="box1">
                 <div class="topbox1">
@@ -146,19 +147,46 @@
                 </div>
               </div>
 
-  </Section>
-
-  
-    <div class="container_menu">
-      <div class="option option--two" tabindex="0"><span class="material-symbols-outlined">directions_car</span>KART 1</div>
-      <div class="option option--three" tabindex="0"><span class="material-symbols-outlined">directions_car</span>KART 2</div>
-      <div class="option option--four" tabindex="0"><span class="material-symbols-outlined">directions_car</span>KART 3</div>
+      </Section>
     </div>
+    <div data-tab-content="tab2"><p>KART 1</p>
+    </div>
+  
+  <div data-tab-content="tab3"><p>KART 2</p>
+  </div>
+  <div data-tab-content="tab4"><p>KART 3</p>
+  </div>
+  <div data-tab-content="tab5"><p>KART 4</p>
+  </div>
+  </div>
+
+
+
+  <div class="wrapper">
+
+    <div class="print-tab" data-tab-id="1">
+      <ul class="print-tab-menu">
+        <li data-tab-menu="tab1"><a>Tab 1</a></li>
+        <li data-tab-menu="tab2"><a>Tab 2</a></li>
+        <li data-tab-menu="tab3"><a>Tab 3</a></li>
+        <li data-tab-menu="tab4"><a>Tab 4</a></li>
+        <li data-tab-menu="tab5"><a>Tab 5</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
   <script src="Java.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
   <script src="https://cdpn.io/cpe/boomboom/pen.js?key=pen.js-a059aac9-cffc-55b0-a7ab-1e5bd986c9bf" crossorigin=""></script>
+
+
+
+
   <script id="rendered-js">
     const toggle = document.querySelector('nav .toggle');
     toggle.addEventListener('click', e => {
@@ -166,12 +194,49 @@
       toggle('expanded');
     });
     //# sourceURL=pen.js
-        </script>
-  <script>window.onload = function()
-    {
-      var optionOne = document.querySelector('.option--one');
-      optionOne.focus();
-    }</script>
+  </script>
+
+
+  <script>
+    $(function(){
+
+$.each($(".print-tab .print-tab-menu > li"), function(index, value){
+  var menu = $(value).data('tab-menu');
+  var tabID = $(value).parent().parent().data('tab-id');
+  var hash = window.location.hash.split("#").join('');
+  
+  if(hash.length > 0){
+      
+    if(menu == hash){
+      $('.print-tab[data-tab-id="' + tabID + '"] .print-tab-menu > li[data-tab-menu="' + menu + '"]').addClass('active');
+      $('.print-tab[data-tab-id="' + tabID + '"] .print-tab-content > div[data-tab-content="' + menu + '"]').addClass('view');
+    }
+    
+  }else{
+    $('.print-tab[data-tab-id="' + tabID + '"] .print-tab-menu > li:eq(0)').addClass('active');
+    $('.print-tab[data-tab-id="' + tabID + '"] .print-tab-content > div:eq(0)').addClass('view');
+  }
+});
+
+
+
+$(".print-tab .print-tab-menu > li").click(function(event){
+  var $this = $(this),
+    $data = $this.data('tab-menu'),
+    $tabID = $this.parent().parent().data('tab-id');
+  if(!$(this).hasClass("active")){
+
+    window.location.hash = $data;
+    
+    $('.print-tab[data-tab-id="' + $tabID + '"] .print-tab-menu > li').removeClass('active');
+    $(this).addClass('active');
+    
+    $('.print-tab[data-tab-id="' + $tabID + '"] .print-tab-content > div.view').removeClass('view');
+    $('.print-tab[data-tab-id="' + $tabID + '"] .print-tab-content > div[data-tab-content="' + $data + '"]').addClass('view');
+  }
+});
+});
+  </script>
 
 </body>
 </html>
