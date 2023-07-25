@@ -2,13 +2,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 @import url("https://fonts.googleapis.com/css?family=Roboto");
+@font-face {
+  font-family: 'Scania';
+  src: url('Font/ScaniaSansCondensed-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Scania Título';
+  src: url('Font/ScaniaSansHeadline-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Scania Título Regular';
+  src: url('Font/ScaniaSansHeadline-Regular.woff') format('woff');
+}
 
 :root {
   --timing: cubic-bezier(.645,.045,.355,1);
 }
 
 *{
-    font-family: 'Orbitron', sans-serif;
     padding: 0;
     margin: 0;
     text-decoration: none;
@@ -22,11 +33,18 @@
 
 
 header{
-    background-color: rgba(4,30,66,1);
-    border-bottom: 1px ridge rgba(2, 17, 37, 0.8);
-    opacity: 100%;
-    color: white;
-    box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 2%;
+  align-items: center;
+  height: 8%;
+  background-color: rgba(4,30,66,1);
+  border-bottom: 1px ridge rgba(2, 17, 37, 0.8);
+  opacity: 100%;
+  color: white;
+  box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.25);
+  font-family: 'Scania Título', Times, serif;
+  text-shadow: 4px 2px 5px rgba(136, 165, 191, 0.5), -4px -2px 10px #ffffff50;
 }
 body {
   margin: 0px;
@@ -60,22 +78,24 @@ body {
 .pedalcar{
     display: flex;
     justify-content: center;
-}
-.pedalcar img{
-    position: relative;
-    width: 30%;
-    margin-top: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-family: 'Scania Título', Times, serif;
+    color: rgba(4,30,66,1);
+    font-size: 20px;
+    text-shadow: 4px 2px 5px rgba(136, 165, 191, 0.5), -4px -2px 10px #FFFFFF;
 }
 
 
 .container {
     display: flex;
-    position: absolute;
+    position: relative;
     justify-content: center;
     justify-items: center;
     align-items: center;
     height: 50%;
-    letter-spacing: 5px;
+    margin-left: 7%;
+    margin-right: 7%;
 }
 
 
@@ -101,38 +121,38 @@ body {
 
 
 .box1 {
-  width: 25%;
+  width: 100%;
   height: 100%;
-  margin-right: 5%;
+  margin-right: 3%;
   background: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 40px;
+  border-radius: 30px;
   border-style: groove;
   box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.25);
   background-color: #E7E9EE;
 }
 .box2 {
-    width: 25%;
+    width: 100%;
     height: 100%;
     background: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 40px;
+    border-radius: 30px;
     border-style: groove;
     box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.25);
     background-color: #E7E9EE;
 }
 .box3 {
-  width: 25%;
+  width: 100%;
   height: 100%;
-  margin-left: 5%;
+  margin-left: 3%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 40px;
+  border-radius: 30px;
   border-style: groove;
   box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.25);
   background-color: #E7E9EE;
@@ -146,23 +166,26 @@ body {
 
 
 
-.topbox1 img{
-  position: relative;
-  left: 31%;
-  top: 10px;
-  width: 38%;
+.topbox1{
+  margin-top: 4%;
+  font-family: 'Scania Título', Times, serif;
+  color: rgba(4,30,66,1);
+  font-size: 30px;
+  text-shadow: 4px 2px 5px rgba(136, 165, 191, 0.5), -4px -2px 10px #FFFFFF;
 }
-.topbox2 img{
-    position: relative;
-    left: 14.5%;
-    top: 10px;
-    width: 70%;
+.topbox2{
+  margin-top: 4%;
+  font-family: 'Scania Título', Times, serif;
+  color: rgba(4,30,66,1);
+  font-size: 30px;
+  text-shadow: 4px 2px 5px rgba(136, 165, 191, 0.5), -4px -2px 10px #FFFFFF;
 }
-.topbox3 img{
-  position: relative;
-  left: 24%;
-  top: 10px;
-  width: 50%;
+.topbox3{
+  margin-top: 4%;
+  font-family: 'Scania Título', Times, serif;
+  color: rgba(4,30,66,1);
+  font-size: 30px;
+  text-shadow: 4px 2px 5px rgba(136, 165, 191, 0.5), -4px -2px 10px #FFFFFF;
 }
 
 
@@ -186,22 +209,28 @@ body {
   display: flex;
   align-items: center;
   position: relative;
-  margin-top: auto;
-  font-size: 40px;
+  margin-top: 5%;
+  font-size: 50px;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 2px;
 }
 .midbox2{
   display: flex;
   align-items: center;
   position: relative;
-  margin-top: auto;
-  font-size: 40px;
+  margin-top: 5%;
+  font-size: 50px;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 2px;
 }
 .midbox3{
   display: flex;
   align-items: center;
+  margin-top: 5%;
   position: relative;
-  margin-top: auto;
-  font-size: 40px;
+  font-size: 50px;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 2px;
 }
 
 
@@ -214,7 +243,8 @@ body {
   display: flex;
   align-items: center;
   position: relative;
-  margin-top: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
   font-size: 20px;
 }
 .botbox1 button {
@@ -231,7 +261,8 @@ body {
   display: flex;
   align-items: center;
   position: relative;
-  margin-top: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
   font-size: 20px;
 }
 .botbox2 button {
@@ -248,7 +279,8 @@ body {
   display: flex;
   align-items: center;
   position: relative;
-  margin-top: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
   font-size: 20px;
 }
 .botbox3 button {
@@ -399,7 +431,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    bottom: 12%;
+    bottom: 13%;
     left: 25%;
     right: 25%;
 
@@ -512,7 +544,7 @@ text-shadow: 1px 1px 1px #d6e1ef99, 0 0 0 #000, 1px 1px 1px #d6e1ef00;
 
 
 nav {
-  --full-size: 10rem;
+  --full-size: 11rem;
   --item-size: 2rem;
   --rounding: 0.75rem;
   --shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.4);
@@ -538,6 +570,7 @@ nav {
   margin-left: 5px;
   transition: width var(--transition);
   z-index: 1;
+  font-family: 'Scania', Times, serif;
 }
 
 nav:hover{
@@ -681,7 +714,7 @@ nav.expanded .item {
 nav.expanded .escrita_menu {
   position: absolute;
   clip-path: none;
-  left: 35%;
+  left: 40%;
   top: 4.5%;
   opacity: 1;
   font-weight: bold;
@@ -720,7 +753,7 @@ nav.expanded .item:hover {
   position: absolute;
   width: 100%;
   bottom: 0;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Scania Título Regular', Times, serif;
 }
 .print-tab ul.print-tab-menu {
   width: 100%;
@@ -758,6 +791,7 @@ nav.expanded .item:hover {
 	text-overflow: ellipsis;
 	color: #818181;
 	font-size: 10px;
+  letter-spacing: 2px;
 	line-height: 50px;
 	text-align: center;
 }
