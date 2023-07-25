@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css2?family=Tektur:wght@500&display=swap");
 @font-face {
   font-family: "Scania";
   src: url("Font/ScaniaSansCondensed-Bold.woff") format("woff");
@@ -188,7 +189,7 @@ body {
   position: relative;
   margin-top: 5%;
   font-size: 50px;
-  font-family: "Orbitron", sans-serif;
+  font-family: "Tektur", cursive;
   letter-spacing: 2px;
 }
 
@@ -198,17 +199,17 @@ body {
   position: relative;
   margin-top: 5%;
   font-size: 50px;
-  font-family: "Orbitron", sans-serif;
+  font-family: "Tektur", cursive;
   letter-spacing: 2px;
 }
 
 .midbox3 {
   display: flex;
   align-items: center;
-  margin-top: 5%;
   position: relative;
+  margin-top: 5%;
   font-size: 50px;
-  font-family: "Orbitron", sans-serif;
+  font-family: "Tektur", cursive;
   letter-spacing: 2px;
 }
 
