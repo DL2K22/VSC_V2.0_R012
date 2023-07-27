@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedal Car</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<header>
+    <div>
+        Pedal Car
+    </div>
+    <div class="scaniaway">
+        Scania Way Experience Arena
+    </div>
+</header>
+
+
+<body>
+
+  <div class="login-container">
+
+    <form id="login-form">
+
+      <h2>Login</h2>
+
+      <input type="password" placeholder="Senha" id="password" required>
+
+      <button id="button_submit" type="submit">Entrar</button>
+
+    </form>
+
+  </div>
+
+<script>
+    document.getElementById("login-form").addEventListener("submit", checkLogin);
+
+    function checkLogin(event) {
+        event.preventDefault(); // Prevent form submission
+
+        const passwordInput = document.getElementById("password").value;
+
+        if (passwordInput === "teste") {
+            window.location.href = "Index.html";
+        } else {
+            alert("Senha incorreta. Tente novamente!");
+        }
+    }
+</script>
+
+</body>
+</html>

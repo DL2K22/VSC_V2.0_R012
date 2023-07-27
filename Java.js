@@ -203,9 +203,3 @@ function clickHandler() {
 }
 
 btn.addEventListener('click', clickHandler);
-
-
-
-
-
-
