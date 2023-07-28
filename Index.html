@@ -23,16 +23,26 @@
 
 
 <body>
+    <video video autoplay loop poster="Video.mp4" class="bg-video">
+        <source src="/Pictures/Video.mp4" type="video/mp4">
+    </video>
+
+    
 
   <div class="login-container">
 
     <form id="login-form">
 
-      <h2>Login</h2>
+        <h2>Login</h2>
 
-      <input type="password" placeholder="Senha" id="password" required>
+        <div class="campo">
+            <input type="password" placeholder="Senha" id="password" required>
+            <span class="material-symbols-outlined" id="olho">
+                visibility
+            </span>
+        </div>
 
-      <button id="button_submit" type="submit">Entrar</button>
+        <button id="button_submit" type="submit">Entrar</button>
 
     </form>
 
@@ -52,6 +62,21 @@
             alert("Senha incorreta. Tente novamente!");
         }
     }
+</script>
+
+<script>
+    document.getElementById('olho').addEventListener('mousedown', function() {
+    document.getElementById('password').type = 'text';
+    });
+
+    document.getElementById('olho').addEventListener('mouseup', function() {
+    document.getElementById('password').type = 'password';
+    });
+
+    // Para que o password não fique exposto apos mover a imagem.
+    document.getElementById('olho').addEventListener('mousemove', function() {
+    document.getElementById('password').type = 'password';
+    });
 </script>
 
 </body>
