@@ -5,15 +5,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Tektur:wght@500&display=swap");
 @font-face {
   font-family: "Scania";
-  src: url("Font/ScaniaSansCondensed-Bold.woff") format("woff");
+  src: url("/Font/ScaniaSansCondensed-Bold.woff") format("woff");
 }
 @font-face {
   font-family: "Scania Título";
-  src: url("Font/ScaniaSansHeadline-Bold.woff") format("woff");
+  src: url("/Font/ScaniaSansHeadline-Bold.woff") format("woff");
 }
 @font-face {
   font-family: "Scania Título Regular";
-  src: url("Font/ScaniaSansHeadline-Regular.woff") format("woff");
+  src: url("/Font/ScaniaSansHeadline-Regular.woff") format("woff");
 }
 :root {
   --timing: cubic-bezier(.645,.045,.355,1);
