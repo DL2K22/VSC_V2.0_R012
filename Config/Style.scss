@@ -41,7 +41,7 @@ header{
   padding-left: 2%;
   padding-right: 2%;
   align-items: center;
-  height: 8%;
+  height: 5%;
   background-color: rgba(4,30,66,1);
   border-bottom: 1px ridge rgba(2, 17, 37, 0.8);
   opacity: 100%;
@@ -49,10 +49,15 @@ header{
   box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.25);
   font-family: 'Scania Título', Times, serif;
   text-shadow: 4px 2px 5px rgba(136, 165, 191, 0.5), -4px -2px 10px #ffffff50;
-}
-.scaniaway{
   font-size: 10px;
-  font-style: italic;
+}
+
+.scaniaway{
+  width: 2%;
+}
+.scaniaway img{
+  width: 100%;
+  margin: auto;
 }
 body {
   margin: 0px;
@@ -92,7 +97,7 @@ body {
     margin-bottom: 2%;
     font-family: 'Scania Título', Times, serif;
     color: rgba(4,30,66,1);
-    font-size: 20px;
+    font-size: 15px;
     text-shadow: 4px 3px 2px rgba(136, 165, 191, 0.5), -4px -2px 10px #FFFFFF;
 }
 
@@ -140,7 +145,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 30px;
+  border-radius: 10px;
   border-style: groove;
   box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.25);
   background-color: #E7E9EE;
@@ -152,7 +157,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 30px;
+    border-radius: 10px;
     border-style: groove;
     box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.25);
     background-color: #E7E9EE;
@@ -160,21 +165,36 @@ body {
 .box3 {
   width: 100%;
   height: 100%;
+  background: #fff;
   margin-left: 3%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 30px;
+  border-radius: 10px;
   border-style: groove;
   box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.25);
   background-color: #E7E9EE;
-  transition: background-color 2s ease-in-out;
-}
-.andonativo{
-  background-color: #fffb19;
-  transition: background-color 2s ease-in-out;
 }
 
+
+
+
+.boxtab {
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  border-style: groove;
+  box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.25);
+  background-color: #eceee7;
+  transition: background-color 2s ease-in-out;
+}
+.boxtab-ativo{
+  background-color: yellow;
+}
 
 
 
@@ -193,6 +213,13 @@ body {
   text-shadow: 4px 2px 5px rgba(136, 165, 191, 0.5), -4px -2px 10px #FFFFFF;
 }
 .topbox3{
+  margin-top: 2%;
+  font-family: 'Scania Título', Times, serif;
+  color: rgba(4,30,66,1);
+  font-size: 40px;
+  text-shadow: 4px 2px 5px rgba(136, 165, 191, 0.5), -4px -2px 10px #FFFFFF;
+}
+.topbox4{
   margin-top: 4%;
   font-family: 'Scania Título', Times, serif;
   color: rgba(4,30,66,1);
@@ -221,10 +248,11 @@ body {
   display: flex;
   align-items: center;
   position: relative;
-  margin-top: 5%;
   font-size: 50px;
   font-family: 'Tektur', cursive;
   letter-spacing: 2px;
+  margin-bottom: 46.011%;
+  margin-top: 26.01%;
 }
 .midbox2{
   display: flex;
@@ -234,17 +262,123 @@ body {
   font-size: 50px;
   font-family: 'Tektur', cursive;
   letter-spacing: 2px;
+  margin-bottom: 46.011%;
+  margin-top: 26.01%;
 }
 .midbox3{
   display: flex;
   align-items: center;
   position: relative;
-  margin-top: 5%;
-  font-size: 50px;
+  margin-top: 2%;
+  font-size: 80px;
   font-family: 'Tektur', cursive;
   letter-spacing: 2px;
 }
+.midbox4{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 2%;
+  font-size: 15px;
+  font-family: 'Tektur', cursive;
+  letter-spacing: 2px;
+  margin-bottom: 4%;
+}
 
+
+
+.titulo{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.boxandon-ativo{
+  background-color: yellow;
+  box-shadow: 5px 4px 20px rgba(63, 63, 63, 0.25);
+  transition: background-color 2s ease-in-out;
+}
+.boxandon1{
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  border-color: #00000010;
+  border-top-style: outset;
+  border-bottom-style: outset;
+  transition: 2ms;
+}
+.boxandon2{
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  border-color: #00000010;
+  border-top-style: outset;
+  border-bottom-style: outset;
+}
+.boxandon3{
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  border-color: #00000010;
+  border-top-style: outset;
+  border-bottom-style: outset;
+}
+.boxandon4{
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  border-color: #00000010;
+  border-top-style: outset;
+  border-bottom-style: outset;
+}
+.boxandon5{
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  border-color: #00000010;
+  border-top-style: outset;
+  border-bottom-style: outset;
+}
+.boxandon6{
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  border-color: #00000010;
+  border-top-style: outset;
+  border-bottom-style: outset;
+}
+.boxandon7{
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  border-color: #00000010;
+  border-top-style: outset;
+  border-bottom-style: outset;
+}
+.boxandon8{
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  border-color: #00000010;
+  border-top-style: outset;
+  border-bottom-style: outset;
+}
 
 
 
@@ -259,16 +393,6 @@ body {
   margin-bottom: 5%;
   font-size: 20px;
 }
-.botbox1 button {
-  --w: 8em;
-  position: relative;
-  bottom: 15%;
-  font-size: 30%;
-  width: var(--w);
-  height: var(--w);
-  overflow: hidden;
-  visibility: hidden;
-}
 .botbox2{
   display: flex;
   align-items: center;
@@ -277,17 +401,15 @@ body {
   margin-bottom: 5%;
   font-size: 20px;
 }
-.botbox2 button {
-  --w: 8em;
-  position: relative;
-  bottom: 15%;
-  font-size: 30%;
-  width: var(--w);
-  height: var(--w);
-  overflow: hidden;
-  visibility: hidden;
-}
 .botbox3{
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  font-size: 20px;
+}
+.botbox4{
   display: flex;
   align-items: center;
   position: relative;
@@ -295,6 +417,8 @@ body {
   margin-bottom: 5%;
   font-size: 20px;
 }
+
+
 .botbox3 button {
   --w: 8em;
   --bg: rgb(var(--rgb));
@@ -445,7 +569,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    bottom: 13%;
+    bottom: 12%;
     left: 25%;
     right: 25%;
 
@@ -769,7 +893,7 @@ nav.expanded .item:hover {
   width: 100%;
   bottom: 0;
   font-family: 'Scania Título Regular', Times, serif;
-  text-shadow: 1px 2px 2px rgba(136, 165, 191, 0.5), -4px -2px 10px #FFFFFF;
+  text-shadow: 1px 2px 5px rgba(136, 165, 191, 0.5), -4px -2px 20px #FFFFFF;
 }
 .print-tab ul.print-tab-menu {
   width: 100%;
@@ -777,9 +901,8 @@ nav.expanded .item:hover {
   display: flex;
   overflow-x: auto;
   white-space: nowrap;
-  background: #f3f3f3;
-  box-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 4px;
-  justify-content: center;
+  background: #f3f3f370;
+  box-shadow: rgba(0, 0, 0, 0.298039) 0px 5px 10px;
   align-items: center;
 }
 	
@@ -787,12 +910,14 @@ nav.expanded .item:hover {
 	position: relative;
 	display: flex;
   align-items: center;
-  height: 30px;
+  border: 1px solid #0000001c;
+  border-radius: 2px 2px 0px 0px;
+  height: 100%;
 	cursor: pointer;
 }
 
 .print-tab ul.print-tab-menu > li.active {
-	border-top: 3px solid red;
+	border-top: 2px solid red;
 	background: #fff;
 	box-shadow: rgba(0, 0, 0, 0.14902) 0px -2px 3px 0px;
 	z-index: 2;
@@ -800,7 +925,7 @@ nav.expanded .item:hover {
 
 .print-tab ul.print-tab-menu > li > a {
 	display: block;
-  min-width: 140px; 
+  min-width: 200px; 
 	max-width: 300px;
 	overflow: hidden;
 	white-space: nowrap;
@@ -808,7 +933,7 @@ nav.expanded .item:hover {
 	color: #818181;
 	font-size: 10px;
   letter-spacing: 2px;
-	line-height: 50px;
+	line-height: 30px;
 	text-align: center;
 }
 
@@ -820,13 +945,6 @@ nav.expanded .item:hover {
 .print-tab .print-tab-content > div.view {
 	display: block;
   position: static;
-}
-
-.print-tab .print-tab-content > div p {
-  text-align: center;
-  min-height: 200px;
-  line-height: 200px;
-  display: block;
 }
 
 
@@ -865,7 +983,7 @@ nav.expanded .item:hover {
   height: auto; 
   z-index: -100;
   transform: translateX(-50%) translateY(-50%);
-  background: url('/Pictures/Video.mp4');
+  background: url('/Pictures/Video.mp4') no-repeat;
   background-size: cover; 
   opacity: 40%;
   transition: 1s opacity;

@@ -30,10 +30,6 @@ function updateCountdown() {
     }
 }
 
-function pad(value) {
-    return value < 10 ? '0' + value : value;
-}
-
 
 
 const btns = document.querySelectorAll('.btn');
@@ -80,7 +76,6 @@ function startstoptime() {
     btn.classList.remove('animating');
     andon.classList.remove('andonativo');
     btn.classList.remove('active');
-    heading.classList.remove('active');
 }
 
 function updatestoptime() {
@@ -92,12 +87,6 @@ function updatestoptime() {
 
     timerElement_stoptime.textContent = pad(minutes_stoptime) + ':' + pad(seconds_stoptime);
 }
-
-function pad(value) {
-    return value < 10 ? '0' + value : value;
-}
-
-
 
 
 
@@ -114,7 +103,6 @@ function stopCountdown() {
     btn.classList.remove('animating');
     andon.classList.remove('andonativo');
     btn.classList.remove('active');
-    heading.classList.remove('active');
 
 }
 
@@ -139,67 +127,77 @@ function resetCountdown() {
     btn.classList.remove('animating');
     andon.classList.remove('andonativo');
     btn.classList.remove('active');
-    heading.classList.remove('active');
-}
-
-
-
-
-
-
-
-
-const btn = document.querySelector('.btn_andon');
-const heading = document.querySelector('.heading');
-var timerElement_andon = document.getElementById("andon");
-var intervalId_andon;
-const andon = document.querySelector('.box3');
-var minutes_andon = 0, seconds_andon = 0;
-
-let active = false;
-
-const turnOn = () => {
-  btn.classList.add('active');
-  heading.classList.add('active');
-}
-
-const turnOff = () => {
-    btn.classList.remove('active');
-    heading.classList.remove('active');
-}
-
-const toggleAnimation = () => {
-  btn.classList.remove('animating');
-  active ? turnOn() : turnOff();
-};
-
-function updateTimer() {
-    seconds_andon++;
-    if (seconds_andon >= 60) {
-        seconds_andon = 0;
-        minutes_andon++;
-    }
-
-    timerElement_andon.textContent = pad(minutes_andon) + ':' + pad(seconds_andon);
 }
 
 function pad(value) {
-    return value < 10 ? '0' + value : value;
+  return value < 10 ? '0' + value : value;
 }
 
-function clickHandler() {
-  if(active = !active){
-    intervalId_andon = setInterval(updateTimer, 1000);
-    btn.classList.add('animating');
-    andon.classList.add('andonativo');
-  }
-  else{
-    btn.classList.add('animating');
-    andon.classList.remove('andonativo');
-    clearInterval(intervalId_andon);
-  }
-  
-  btn.addEventListener('animationend', toggleAnimation);
+
+
+
+// ! ||--------------------------------------------------------------------------------||
+// ! ||                             BOTÕES DE INICIO ANDON                             ||
+// ! ||--------------------------------------------------------------------------------||
+
+// Adicionando o evento de clique a todos os botões
+
+function iniciarCronometro(id) {
+  const cronometro = document.getElementById(`andon${id}`);
+  const cronometro_tabs = document.getElementById(`andontab${id}`);
+  const boxtab = document.getElementById(`boxtab-ativo${id}`);
+  const boxandon = document.getElementById(`boxandon-ativo${id}`);
+  let segundos = 0;
+  let minutos = 0;
+  const atualizarCronometro = () => {
+    segundos++;
+    if (segundos === 60) {
+      segundos = 0;
+      minutos++;
+    }
+    cronometro.textContent = `${minutos.toString().padStart(2, '0')}:${segundos.toString().padStart(2, '0')}`;
+    cronometro_tabs.textContent = `${minutos.toString().padStart(2, '0')}:${segundos.toString().padStart(2, '0')}`;
+  };
+  boxtab.classList.add('boxtab-ativo');
+  boxandon.classList.add('boxandon-ativo');
+  const intervalId = setInterval(atualizarCronometro, 1000);
+  return intervalId;
 }
 
-btn.addEventListener('click', clickHandler);
+function pararCronometro(intervalId) {
+  clearInterval(intervalId);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  for (let i = 1; i <= 8; i++) {
+    const botao = document.querySelector(`.btn_andon${i}`);
+    let intervalId;
+
+    const turnOn = () => {
+      botao.classList.add('active');
+    }
+    
+    const turnOff = () => {
+      botao.classList.remove('active');
+    }
+    
+    const toggleAnimation = () => {
+      botao.classList.remove('animating');
+      intervalId ? turnOn() : turnOff();
+    };
+
+
+    botao.addEventListener('click', () => {
+      if (intervalId) {
+        pararCronometro(intervalId);
+        intervalId = null;
+        
+      } else {
+
+        intervalId = iniciarCronometro(i);
+      }
+      botao.classList.add('animating');
+      botao.addEventListener('animationend', toggleAnimation);
+    });
+  }
+});
