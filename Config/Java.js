@@ -114,8 +114,6 @@ function animation() {
 function resetCountdown(){
   const buttons = [];
   const intervalIds = [];
-  isAnyRunning = false;
-  isTimerRunning = false;
   
   for (let i = 1; i <= 8; i++) {
     if (intervalIds[i - 1] !== null) {
@@ -160,6 +158,8 @@ function resetCountdown(){
     intervalIds.push(intervalId);
   };
 
+
+  isAnyRunning = false;
   isTimerRunning = false;
   isStopTimeRunning = false;
   bodyElement.classList.remove('red-background');
@@ -185,13 +185,13 @@ function resetCountdown(){
 // ! ||--------------------------------------------------------------------------------||
 
 function stopCountdown() {
+  isAnyRunning = false;
   isTimerRunning = false;
   isStopTimeRunning = false;
-  isAnyRunning = false;
   clearInterval(intervalId_stoptime);
   clearInterval(intervalId_takt);
 
-  console.log("PAUSADO");
+  console.log("Pause");
 
   for (let i = 1; i <= 8; i++) {
     const botao = document.querySelector(`.btn_andon${i}`);
@@ -267,12 +267,46 @@ function pararCronometro(intervalId) {
   clearInterval(intervalId);
 }
 
-function CorTelaNormal (id){
+function CorTelaNormal(id) {
   const boxtab = document.getElementById(`boxtab-ativo${id}`);
   const boxandon = document.getElementById(`boxandon-ativo${id}`);
 
   boxtab.classList.remove('boxtab-ativo');
   boxandon.classList.remove('boxandon-ativo');
+}
+
+function chaveAndon() {
+  isAnyRunning = false;
+  console.log("Pause");
+
+  for (let i = 1; i <= 8; i++) {
+    const botao = document.querySelector(`.btn_andon${i}`);
+    let intervalId;
+
+    const turnOn = () => {
+      botao.classList.add('active');
+    }
+    
+    const turnOff = () => {
+      botao.classList.remove('active');
+    }
+    
+    const toggleAnimation = () => {
+      botao.classList.remove('animating');
+      intervalId ? turnOn() : turnOff();
+    };
+
+    if (!intervalId) {
+      clearInterval(i);
+      intervalId = null;
+      CorTelaNormal(i);
+    } else {
+      console.log("Iniciar O Andon Primeiro !");
+    }
+    
+    botao.classList.add('animating');
+    botao.addEventListener('animationend', toggleAnimation);
+  }
 }
 
 
