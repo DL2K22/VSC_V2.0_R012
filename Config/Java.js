@@ -10,10 +10,12 @@
 var timerElement = document.getElementById('timer');
 var bodyElement = document.body;
 var intervalId_takt;
-var totalSeconds = 30; // 7 minutos em segundos
+var totalSeconds = 10; // 7 minutos em segundos
+
 
 const startBtn = document.getElementById('botao');
 let isTimerRunning = false;
+let isAnyRunning = false;
 
 
 function startCountdown() {
@@ -25,20 +27,22 @@ function startCountdown() {
 }
 
 function updateCountdown() {
-  const intervalIds = [];
-  const isRunning = intervalIds.some(id => id !== null);
-    if (totalSeconds <= 0 && isRunning) {
-        isTimerRunning = false;
-        clearInterval(intervalId_takt);
-        startstoptime();
-        bodyElement.classList.add('red-background');
+  if (totalSeconds <= 0) {
+    if (isAnyRunning) {
+      console.log('Takt Acabou Com Um Andon Ativo, Stop Time Iniciado !');
+      isTimerRunning = false;
+      startstoptime();
+    } else {
+      console.log('Andon Não Iniciado, Simulação Redefinida !');
+      resetCountdown();
     }
-    else {
-        var minutes = Math.floor(totalSeconds / 60);
-        var seconds = totalSeconds % 60;
-        timerElement.textContent = pad(minutes) + ':' + pad(seconds);
-        totalSeconds--;
-    }
+  } else {
+    console.log('Cronometrando...');
+    var minutes = Math.floor(totalSeconds / 60);
+    var seconds = totalSeconds % 60;
+    timerElement.textContent = pad(minutes) + ':' + pad(seconds);
+    totalSeconds--;
+  }
 }
 
 
@@ -53,6 +57,9 @@ var minutes_stoptime = 0, seconds_stoptime = 0;
 let isStopTimeRunning = false;
 
 function startstoptime() {
+  clearInterval(intervalId_takt);
+  timerElement.textContent = '00:00';
+  bodyElement.classList.add('red-background');
     if (isStopTimeRunning) {
       return; // Timer is already running, do nothing
     }
@@ -105,11 +112,12 @@ function animation() {
 function resetCountdown(){
   const buttons = [];
   const intervalIds = [];
-
+  isAnyRunning = false;
+  isTimerRunning = false;
   
   for (let i = 1; i <= 8; i++) {
     if (intervalIds[i - 1] !== null) {
-      pararCronometro(intervalIds[i - 1], i);
+      clearInterval(i);
       intervalIds[i - 1] = null;
       const cronometro = document.getElementById(`andon${i}`);
       const cronometro_tabs = document.getElementById(`andontab${i}`);
@@ -121,6 +129,30 @@ function resetCountdown(){
   for (let i = 1; i <= 8; i++) {
     const botao = document.querySelector(`.btn_andon${i}`);
     let intervalId;
+
+    const turnOn = () => {
+      botao.classList.add('active');
+    }
+    
+    const turnOff = () => {
+      botao.classList.remove('active');
+    }
+    
+    const toggleAnimation = () => {
+      botao.classList.remove('animating');
+      intervalId ? turnOn() : turnOff();
+    };
+
+    if (!intervalId) {
+      clearInterval(i);
+      intervalId = null;
+      CorTelaNormal(i);
+    } else {
+      console.log("INICIAR ANDON PRIMEIRO");
+    }
+    
+    botao.classList.add('animating');
+    botao.addEventListener('animationend', toggleAnimation);
 
     buttons.push(botao);
     intervalIds.push(intervalId);
@@ -137,7 +169,7 @@ function resetCountdown(){
   seconds_stoptime = 0;
   timerElement_stoptime.textContent = '00:00';
 
-  totalSeconds = 30; 
+  totalSeconds = 10; 
   timerElement.textContent = '07:00';
 }
     
@@ -153,6 +185,7 @@ function resetCountdown(){
 function stopCountdown() {
   isTimerRunning = false;
   isStopTimeRunning = false;
+  isAnyRunning = false;
   clearInterval(intervalId_stoptime);
   clearInterval(intervalId_takt);
 
@@ -230,7 +263,6 @@ function iniciarCronometro(id) {
 
 function pararCronometro(intervalId) {
   clearInterval(intervalId);
-
 }
 
 function CorTelaNormal (id){
@@ -265,10 +297,12 @@ for (let i = 1; i <= 8; i++) {
       pararCronometro(intervalId, i);
       CorTelaNormal();
       intervalId = null;
+      isAnyRunning = false;
         
     } else {
 
       intervalId = iniciarCronometro(i);
+      isAnyRunning = true;
     }
     botao.classList.add('animating');
     botao.addEventListener('animationend', toggleAnimation);
