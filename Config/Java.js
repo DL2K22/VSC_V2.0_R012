@@ -30,14 +30,16 @@ function updateCountdown() {
   if (totalSeconds <= 0) {
     if (isAnyRunning) {
       console.log('Takt Acabou Com Um Andon Ativo, Stop Time Iniciado !');
+      alert('Takt Acabou Com Um Andon Ativo, Stop Time Iniciado !');
       isTimerRunning = false;
       startstoptime();
     } else {
-      console.log('Andon Não Iniciado, Simulação Redefinida !');
+      console.log('Takt Acabou Com Nenhum Andon Ativo, Simulação Redefinida !');
+      alert('Takt Acabou Com Nenhum Andon Ativo, Simulação Redefinida !');
       resetCountdown();
     }
   } else {
-    console.log('Cronometrando...');
+    console.log('Timing...');
     var minutes = Math.floor(totalSeconds / 60);
     var seconds = totalSeconds % 60;
     timerElement.textContent = pad(minutes) + ':' + pad(seconds);
@@ -213,7 +215,7 @@ function stopCountdown() {
       intervalId = null;
       CorTelaNormal(i);
     } else {
-      console.log("INICIAR ANDON PRIMEIRO");
+      console.log("Iniciar O Andon Primeiro !");
     }
     
     botao.classList.add('animating');
